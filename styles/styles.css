@@ -11,12 +11,10 @@ body {
     background-image: linear-gradient(45deg, #42c2d6, #4b747a); 
 }
 
-
 nav {
     background-color: #006f74;
     padding: 13px;
 }
-
 
 nav ul {
     list-style: none;
@@ -35,7 +33,6 @@ nav a {
     text-decoration: none;
     padding: 10px;
     font-size: 18px;
-    padding: 10px 20px;
     border-radius: 4px;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
@@ -45,11 +42,8 @@ nav a:hover {
     color: #f8f8f8;
 }
 
-
-
 main h1 {
     color: rgb(5, 9, 14);
-    
 }
 
 img {
@@ -67,6 +61,16 @@ main p {
 
 main {
     max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main img {
+    width: 200px;
+    height: auto;
+    margin-left: 110px;
+    order: 1;
 }
 
 aside {
@@ -82,7 +86,7 @@ aside {
 }
 
 aside img {
-    width: 200;
+    width: 200px;
     height: auto;
 }
 
@@ -90,13 +94,6 @@ aside h2 {
     font-size: 30px;
 }
 
-main img {
-    width: 200px;
-    height: auto;
-    margin-left: 110px;
-}
-
 footer {
     margin-top: 100px;
 }
-
