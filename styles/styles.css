@@ -9,6 +9,11 @@ h1, h2, p {
     font-family: 'Roboto', sans-serif;
 }
 
+p {
+    padding: 0;
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -106,8 +111,10 @@ aside h2 {
 
 footer {
     margin-top: 100px;
+    border-top: 10px;
+    text-align: center;
 }
 
 .box {
-    
+
 }
