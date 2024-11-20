@@ -1,4 +1,4 @@
-/* comment */
+/*Class Selectors*/
 * {
     margin: 0;
     padding: 0;
@@ -106,4 +106,8 @@ aside h2 {
 
 footer {
     margin-top: 100px;
+}
+
+.box {
+    
 }
