@@ -1,0 +1,102 @@
+:root {
+    --main-bg-color: #505033;
+    --primary-text-color: #94AE89;
+    --accent-color: #639CE1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #505033;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    color: white;
+    width: 200px;
+    float: right;
+}
+
+.history, .aay {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.history p, .aay p {
+    font-size: 16px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .socials a {
+    margin: 0 10px;
+}
+
+footer .socials img {
+    width: 40px;
+    height: 40px;
+}
