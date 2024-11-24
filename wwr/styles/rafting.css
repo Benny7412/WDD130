@@ -1,11 +1,9 @@
 :root {
-    /* Added this for the sake of the assignment but I wanted to have more control over the colors so I didn't end up using variables */
     --main-bg-color: #505033;
     --primary-text-color: #94AE89;
     --accent-color: #639CE1;
 }
 
-/* Making all headers Georgia serif */
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -18,8 +16,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-
-    /* Making default body text Roboto sans-serif*/
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 0;
@@ -77,8 +73,6 @@ header nav a {
     font-size: 48px;
     margin: 0;
     font-style: italic;
-
-    /*I didn't see anything about these not being allowed so I added outlines to my text using webkits to make it look better!*/
     -webkit-text-fill-color: #5c8c58;
     -webkit-text-stroke: 1px;
 }
