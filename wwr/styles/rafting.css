@@ -98,11 +98,13 @@ nav {
     position: absolute;
     top: 15px;
     margin: 0;
-    color: #000000;
     font-size: 70px;
     font-style: italic;
-    -webkit-text-fill-color: #476b43;
-    -webkit-text-stroke: 1px;
+    background: linear-gradient(45deg, #8af00a, #3e540b);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-fill-color: transparent;
 }
 
 .customer {
