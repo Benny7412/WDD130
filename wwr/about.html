@@ -13,41 +13,59 @@
 </head> 
 <body>
     <header>
+        <img src="images/crossedoars.jpeg" width="100" alt="Website Logo">
         <nav>
-            <img src="images/crossedoars.jpeg" width="100" alt="website logo">
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html"><h2>Home</h2></a></li>
                 <li><a href="about.html"><h2>About Us</h2></a></li>
                 <li><a href="trips.html"><h2>Trips</h2></a></li>
-                <li><a href="contact.html"><h2>Contact Us</h2></a></li>
+                <li class="last"><a href="contact.html"><h2>Contact Us</h2></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <img src="images/raftinghero.jpg" alt="Rafting Adventure">
+            <img src="images/raftinghero.jpg" alt="Rafting Adventure" class="raftingadv">
             <h1>White Water Rafting</h1>
-            <article>
-                <h2>Our Mission</h2>
-                <img src="images/client.jpg" alt="Happy Client">
+            <article class="customer">
+                <img src="images/client.jpg" alt="Happy Client" width="200">
                 <p>A p element with the company purpose, mission, creed, motto, etc. It is Ok to use non-sense, placeholder language for now.</p>
             </article>
         </section>
 
         <section class="history">
-            <h2>History</h2>
-            <p>Sample Text</p>
+            <p>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text </p>
+            <div class="historyimage">
+                <h2>History</h2>
+                <img src="images\crossedoars.jpeg" alt="River with mountains in background" width="300">
+            </div>
+            <p>White Water Rafting was founded in 1976 by John WhiteWaterRafting </p>
         </section>
 
-        <section class="aay">
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
             <div class="images">
-                <img src="images/rafting1.jpg" alt="River with mountains in background" width="400">
-                <img src="images/rafting8.jpg" alt="People laughing on raft" width="400">
-                <img src="images/rafting3.jpg" alt="Rough waters on raft" width="400">
-                <img src="images/rafting4.jpg" alt="Top down view of raft" width="400">
-                <img src="images/rafting5.jpg" alt="People paddling on raft" width="400">
+                <figure>
+                  <img src="images/rafting1.jpg" alt="River with mountains in background" width="200">
+                  <figcaption>Sunny Rocks Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting8.jpg" alt="People laughing on raft" width="200">
+                    <figcaption>Rocky Cove Adventure</figcaption>
+                </figure>
+                <figure>
+                <img src="images/rafting3.jpg" alt="Rough waters on raft" width="200">
+                <figcaption>Loggy Creek Adventure</figcaption>
+                </figure>
+                <figure>
+                <img src="images/rafting4.jpg" alt="Top down view of raft" width="200">
+                <figcaption>Turbulent Mountain Trip</figcaption>
+                </figure>
+                <figure>
+                <img src="images/rafting5.jpg" alt="People paddling on raft" width="200">
+                <figcaption>Intense Waters Adventure</figcaption>
+                </figure>
             </div>
         </section>
     </main>
