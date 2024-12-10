@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-image: linear-gradient(45deg,#364e2f, #779f6b);
@@ -40,7 +40,7 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 120px 1fr 1fr;
     align-items: center;
     width: 100%;
     background-color: #333;
@@ -49,21 +49,18 @@ header {
 }
 
 header img {
+    margin: 0 0.25rem 0 200px;
     width: 150px;
-    justify-self: start;
+    height: auto;
+    position: absolute;
 }
 
-@media (max-width: 800px) {
-    img {
-        display:none
-    }
-}
 
 nav {
     display: flex;
     text-align: right;
     width: 100%;
-    grid-column: 2/4;
+    grid-column: 1/4;
     justify-content: flex-end;
 }
 
@@ -71,15 +68,12 @@ nav {
     display: flex;
     list-style: none;
     justify-content: flex-end;
-    align-self: flex-end;
     width: 100%;
 }
-
 
 .navigation li { 
     margin-left: 40px;
 }
-
 
 .last {
     margin-right: 70px;
@@ -90,18 +84,6 @@ nav {
     color: white;
     padding: 20px;
     text-decoration: none;
-}
-
-@media (max-width: 800px) {
-    .last {
-        margin: 0;
-    }
-}
-@media (max-width: 800px) {
-    .navigation li {
-        margin-left: 10px;
-        
-    }
 }
 
 footer {
@@ -257,31 +239,25 @@ CONTACT.HTML
 main h1 {
     text-align: center;
     font-size: 50px;
-    font-style: italic;
 }
 
-form {
+.content {
     display: flex; 
     overflow: hidden;
     justify-content: space-between;
     height: auto;
     text-align: center;
-    margin-bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
-    form {overflow-x: scroll;} 
-  }
-
-form > * {
+.content > * {
     flex-basis: 100%;
     margin: 0 10% 0 10%;
     width: 0;
-    outline: 0;
 }
 
-form fieldset {
+.content fieldset {
     height: 800px;
+    outline: 0;
     border: solid black 2px;
 }
 
@@ -290,26 +266,28 @@ form fieldset {
 /*//////////////*/
 
 .subform {
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 10% 30% 30% 30%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .subform > * {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 20px;
     margin: 0;
     color: rgb(241, 250, 199);
     font-size: 20px;
     margin-top: 30px;
-    grid-column: 2;
 }
 
+.subform .userinfodiv, .reasondiv, .subelement {
+    flex: 1;
+}
 
 .subform h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    position: relative;
+    font-size: 30px;
 }
 
 
@@ -342,18 +320,14 @@ form fieldset {
     border: solid 1px #40E0D0;
 }
 
-/*User info input element*/
-
-.userinfodiv {
-    grid-row: 2
-
+.userinfodiv h2 {
+    margin: 20px 0px 20px 0px;
 }
 
 /*Reason for contacting*/
 .reasondiv {
     padding: 0;
     margin: 0;
-    grid-row: 3;
 }
 
 .reasondiv > * {
@@ -376,17 +350,15 @@ form fieldset {
 
 #message {
     height: 60px;
-    margin: 25px 10px 0 10px;
+    margin: 25px 0 0 0;
 }
 
 /*Submit button*/
 .subelement {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 40%;
     margin: 0;
-    grid-row: 4;
-    align-self: start;
 }
 
 #submitbtn {
@@ -404,106 +376,59 @@ form fieldset {
 
 #submitbtn:hover {
     border: solid 1px hsla(0, 0%, 0%, 0.249);
+    /*40E0D0*/
 }
 
 #submitbtn:focus {
+
     box-shadow: #819299 1px 1px;
 }
 
-#checkboxlabel {
+.subelement #checkboxlabel {
     font-size: 12px;
 }
 
 /*////////////////////*/
 /*Company Information */
 /*////////////////////*/
-
 #compinfo h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 50px;
+    font-size: 35px;
 }
 
-#compinfo h3 {
-    font-size: 25px;
-    text-wrap: wrap;
-    color: rgb(241, 250, 199);
-    font: italic;
+#compinfo h4 {
+    font-size: 20px;
 }
 
 #googlemaps {
     margin-top: 50px;
     max-width: 80%;
-    max-height: 45%;
-    margin-bottom: 10px;
+    max-height: 60%;
+}
+
+.information {
+    color: rgb(241, 250, 199);
+    font: italic;
+}
+
+#compinfotop {
+    margin-top: 60px;
 }
 
 
 
-/*
-TEAM SECTION
-*/
-
-.team-section {
-    display: grid;
-    grid-template-columns: 10% 20% 10% 20% 10% 20% 10%;
-    grid-template-rows: 20% 80%;
-    row-gap: 70px;
-    width: 100%;
-    height: auto;
-}
-
-.team-section h2 {
-    grid-row: 1;
-    grid-column: 4;
-    font-size: 50px;
-    font-style: italic;
-    align-self: center;
-    justify-self: center;
-    height: 100%;
-    margin: 10%;
-}
-
-.team-section h3 {
-    text-align: center;
-    font-style: italic;
-    font-size: 24px;
-    margin: 10px 0px 0px 0px;
-}
-
-.team-section  {
-    text-align: center;
-    color: white;
-}
-
-#team-member1 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-#team-member2 {
-    grid-column: 4;
-    grid-row: 2;
-}
-
-#team-member3 {
-    grid-column: 6;
-    grid-row: 2;
-}
 
 
-
-/*
 .subform > * {
     border: 1px solid yellow;
 }
 
- 
-form {
+/*
+.content {
     border: 1px solid red;
 }
 
 
-form fieldset {
+.content fieldset {
     border: solid 3px black;
 }
 */

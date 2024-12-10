@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | White Water Rafting Company</title>
+    <meta name="description" content="My name is Benjamin. This is an contact page and it is an assignment in class WDD130: Web Fundamentals where we create a website for a White Water Rafting Company">
+    <meta name="author" content="Benjamin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head> 
+<body>
+    <header>
+        <img src="images/crossedoars.jpeg" width="150" alt="Website Logo">
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html"><h2>Home</h2></a></li>
+                <li><a href="about.html"><h2>About Us</h2></a></li>
+                <li><a href="trips.html"><h2>Trips</h2></a></li>
+                <li class="last"><a href="contact.html"><h2>Contact Us</h2></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <form>
+            <fieldset id="subform" class="subform">
+                <h2>Submit a Form</h2>
+                <div class="userinfodiv">
+                    <!--First 3 input type boxes-->
+                    <input type="text" id="fname" name="fname" placeholder="First name" alt="Input first name">
+                    <input type="text" id= "lname" name="lname" placeholder="Last name" alt="Input last name">
+                    <input type="text" id="email" name="email" placeholder="Email" alt="Input email">
+                </div>
+
+                <div class="reasondiv">
+                    <label id="reasonlabel"alt="Why are you reaching out to us?">Why are you reaching out to us?</label>
+                    <select id="reason" name="reason" alt="Select your reason for contacting us"> <!--I didn't see a requirement anywhere to use radio so I used <select> for design-->
+                        <option value="inquiry" alt="General Inquiry">General Inquiry</option>
+                        <option value="reservation" alt="Question about Reservations">Reservation Question</option>
+                        <option value="suggestion" alt="Website suggestion">Website Suggestion</option>
+                     </select>
+                    <input type="text" id="message" name="message" placeholder="Message" alt="Enter your message/question here">
+                 </div>
+
+                <div class="subelement">
+                    <input type="submit" id="submitbtn" value="Submit" alt="Submit form button"> 
+                    <label for="checkbox" id="checkboxlabel"><input type="checkbox" id="subscribe" alt="Checkbox to subscribe to our monthly newsletter">Please subscribe me to the monthly newsletter.</label>
+                </div>
+
+            </fieldset>
+            <fieldset id="compinfo">
+                <h2>Company Information</h2>
+                <h3 class="information" id="compinfotop">123 Company street, Town, USA</h3>
+                <h3 class="information">+1 812-345-6789</h3>
+                <h3 class="information">WhiteWaterRafting@gmail.com</h3>
+        
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1676.1783482878668!2d-34.63252714332862!3d-77.87430875246939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbaf6581be41e2fff%3A0x789b5059a5be3388!2sBelgrano%20II%20Base%2C%20Antarctica!5e0!3m2!1sen!2sus!4v1733651237114!5m2!1sen!2sus"
+                     
+                id="googlemaps" width="533" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+            </fieldset>
+        </form>
+
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div id="team-member1">
+                <img src="images/client.jpg" alt="Picture of CEO" width="200">
+                <h3>CEO</h3>
+                <p>John, Doe</p>
+            </div>
+            <div id="team-member2">
+                <img src="images/client.jpg" alt="Picture of Founder" width="200">
+                <h3>Founder</h3>
+                <p>Carl, White Water rafting</p>
+            </div>
+            <div id="team-member3">
+                <img src="images/client.jpg" alt="Picture of Business Operations Manager" width="200">
+                <h3>Business Operations Manager</h3>
+                <p>Jane, Doe</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2024 White Water Rafting | Created by Benjamin Walveranta</p>
+        <nav class="socials">
+            <a href="https://twitter.com">
+                <img src="images/twitter.png" alt="twitter logo">
+            </a>
+            <a href="https://youtube.com">
+                <img src="images/youtube.png" alt="youtube logo">
+            </a>
+            <a href="https://facebook.com">
+                <img src="images/facebook.png" width="50" alt="facebook logo">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
