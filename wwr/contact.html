@@ -31,23 +31,24 @@
                 <h2>Submit a Form</h2>
                 <div class="userinfodiv">
                     <!--First 3 input type boxes-->
+                    <label for="fname"></label>
+                    <label for="lname"></label>
                     <input type="text" id="fname" name="fname" placeholder="First name" alt="Input first name">
                     <input type="text" id= "lname" name="lname" placeholder="Last name" alt="Input last name">
                     <input type="text" id="email" name="email" placeholder="Email" alt="Input email">
                 </div>
 
                 <div class="reasondiv">
-                    <label id="reasonlabel"alt="Why are you reaching out to us?">Why are you reaching out to us?</label>
-                    <select id="reason" name="reason" alt="Select your reason for contacting us"> <!--I didn't see a requirement anywhere to use radio so I used <select> for design-->
-                        <option value="inquiry" alt="General Inquiry">General Inquiry</option>
-                        <option value="reservation" alt="Question about Reservations">Reservation Question</option>
-                        <option value="suggestion" alt="Website suggestion">Website Suggestion</option>
-                     </select>
+                    <label for="General Inquiry">General Inquiry<input type="radio" id="inquiry" name="reasonforcontact" value="General Inquiry"></label>
+                    <label for="General Inquiry">Reservation Question<input type="radio" id="reservation" name="reasonforcontact" value="Rservation Question"></label>
+                    <label for="General Inquiry">Website Suggestion<input type="radio" id="suggestion" name="reasonforcontact" value="Website Suggestion"></label>
                     <input type="text" id="message" name="message" placeholder="Message" alt="Enter your message/question here">
                  </div>
 
                 <div class="subelement">
-                    <input type="submit" id="submitbtn" value="Submit" alt="Submit form button"> 
+                    <div id="subbutton">
+                        <button type="submit" id="submitbtn" alt="Button that submits your form">Submit</button>
+                    </div>
                     <label for="checkbox" id="checkboxlabel"><input type="checkbox" id="subscribe" alt="Checkbox to subscribe to our monthly newsletter">Please subscribe me to the monthly newsletter.</label>
                 </div>
 
@@ -60,7 +61,7 @@
         
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1676.1783482878668!2d-34.63252714332862!3d-77.87430875246939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbaf6581be41e2fff%3A0x789b5059a5be3388!2sBelgrano%20II%20Base%2C%20Antarctica!5e0!3m2!1sen!2sus!4v1733651237114!5m2!1sen!2sus"
                      
-                id="googlemaps" width="533" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                id="googlemaps" width="533" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
             </fieldset>
         </form>
