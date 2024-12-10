@@ -317,7 +317,7 @@ form fieldset {
 
 /*Input styling*/
 
-.subform input[type="text"] {
+.subform input[type="text"], textarea {
     box-sizing: border-box;
     border: 1px gray;
     height: 30px;
@@ -325,36 +325,37 @@ form fieldset {
     border-radius: 5px;
 }
 
-.subform input[type="select"]:hover {
-    transition: 0.2s ease-in;
-    border: 1px solid black;
-    box-shadow: 1px 1px;
+.subform input[type="text"]:hover, textarea:hover {
+    border: solid gray 1px ;
 }
 
-.subform input[type="text"]:focus {
+
+.subform input[type="text"]:focus, textarea:focus {
     outline: 0;
     box-shadow:  0px 0px;
     border: solid 1px #40E0D0;
 }
 
-
-.subform select:focus {
-    outline: 0;
-    box-shadow:  0px 0px;
-    border: solid 1px #40E0D0;
-}
 
 /*User info input class*/
 
 .userinfodiv {
     grid-row: 2
+}
 
+.userinfolabels {
+    margin-top: 10px;
+    padding:0;
+}
+
+.userinfodiv input[type="text"] {
+    margin-top: 15px;
 }
 
 /*Reason for contacting class*/
 .reasondiv {
     padding: 0;
-    margin: 0;
+    margin: 20px 0 0 0;
     grid-row: 3;
 }
 

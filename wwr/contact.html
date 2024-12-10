@@ -30,26 +30,35 @@
             <fieldset id="subform" class="subform">
                 <h2>Submit a Form</h2>
                 <div class="userinfodiv">
-                    <!--First 3 input type boxes-->
-                    <label for="fname"></label>
-                    <label for="lname"></label>
-                    <input type="text" id="fname" name="fname" placeholder="First name" alt="Input first name">
-                    <input type="text" id= "lname" name="lname" placeholder="Last name" alt="Input last name">
-                    <input type="text" id="email" name="email" placeholder="Email" alt="Input email">
+                    <label for="fname" class="userinfolabels">What is your first name?
+                        <input type="text" id="fname" name="fname" placeholder="First name">
+                    </label>
+                    <label for="lname" class="userinfolabels">What is your last name?
+                        <input type="text" id="lname" name="lname" placeholder="Last name">
+                    </label>
+                    <label for="email" class="userinfolabels">What is your email?
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </label>
                 </div>
 
                 <div class="reasondiv">
-                    <label for="General Inquiry">General Inquiry<input type="radio" id="inquiry" name="reasonforcontact" value="General Inquiry"></label>
-                    <label for="General Inquiry">Reservation Question<input type="radio" id="reservation" name="reasonforcontact" value="Rservation Question"></label>
-                    <label for="General Inquiry">Website Suggestion<input type="radio" id="suggestion" name="reasonforcontact" value="Website Suggestion"></label>
-                    <input type="text" id="message" name="message" placeholder="Message" alt="Enter your message/question here">
-                 </div>
+                    <label for="inquiry">General Inquiry
+                        <input type="radio" id="inquiry" name="reasonforcontact" value="General Inquiry">
+                    </label>
+                    <label for="reservation">Reservation Question
+                        <input type="radio" id="reservation" name="reasonforcontact" value="Reservation Question">
+                    </label>
+                    <label for="suggestion">Website Suggestion
+                        <input type="radio" id="suggestion" name="reasonforcontact" value="Website Suggestion">
+                    </label>
+                    <textarea id="message" name="message" placeholder="Enter your message/question here" rows="4" cols="50" alt="Enter your message/question here"></textarea>
+                </div>
 
                 <div class="subelement">
                     <div id="subbutton">
                         <button type="submit" id="submitbtn" alt="Button that submits your form">Submit</button>
                     </div>
-                    <label for="checkbox" id="checkboxlabel"><input type="checkbox" id="subscribe" alt="Checkbox to subscribe to our monthly newsletter">Please subscribe me to the monthly newsletter.</label>
+                    <label for="subscribe" id="checkboxlabel"><input type="checkbox" id="subscribe" alt="Checkbox to subscribe to our monthly newsletter">Please subscribe me to the monthly newsletter.</label>
                 </div>
 
             </fieldset>
@@ -85,8 +94,6 @@
             </div>
         </section>
     </main>
-
-
 
     <footer>
         <p>&copy; 2024 White Water Rafting | Created by Benjamin Walveranta</p>
