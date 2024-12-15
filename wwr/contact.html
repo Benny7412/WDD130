@@ -13,7 +13,7 @@
 </head> 
 <body>
     <header>
-        <img src="images/crossedoars.jpeg" width="150" alt="Website Logo">
+        <img src="images/riverlogo.jpg"  alt="Website Logo">
         <nav>
             <ul class="navigation">
                 <li><a href="index.html"><h2>Home</h2></a></li>
@@ -32,11 +32,11 @@
                 <div class="userinfodiv">
                     <!--First 3 input type boxes-->
                     <label for="fname" class="userinfolabels">What is your first name?</label>
-                    <input type="text" id="fname" name="fname" placeholder="First name">
+                    <input type="text" id="contact-fname" name="fname" placeholder="First name" class="wwr-input-style" >
                     <label for="lname" class="userinfolabels">What is your Last name?</label>
-                    <input type="text" id= "lname" name="lname" placeholder="Last name">
-                    <label for="email" class="userinfolabels">What is your Email?</label>
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="text" id= "contact-lname" name="lname" placeholder="Last name" class="wwr-input-style" >
+                    <label for="email" class="userinfolabels" >What is your Email?</label>
+                    <input type="text" id="contact-email" name="email" placeholder="Email" class="wwr-input-style" >
                 </div>
 
                 <div class="reasondiv">
@@ -44,7 +44,7 @@
                         <input type="radio" id="inquiry" name="reasonforcontact" value="General Inquiry">
                     </label>
                     <label for="reservation">Reservation Question
-                        <input type="radio" id="reservation" name="reasonforcontact" value="Reservation Question">
+                        <input type="radio" id="reservation"  name="reasonforcontact" value="Reservation Question">
                     </label>
                     <label for="suggestion">Website Suggestion
                         <input type="radio" id="suggestion" name="reasonforcontact" value="Website Suggestion">
@@ -52,9 +52,9 @@
                     <textarea id="message" name="message" placeholder="Enter your message/question here" rows="4" cols="50"></textarea>
                 </div>
 
-                <div class="subelement">
+                <div id="subelement">
                     <div id="subbutton">
-                        <button type="submit" id="submitbtn">Submit Inquiry</button>
+                        <button type="submit" id="submitbtn" class="wwr-button-style">Submit Inquiry</button>
                     </div>
                     <label for="subscribe" id="checkboxlabel"><input type="checkbox" id="subscribe">Please subscribe me to the monthly newsletter.</label>
                 </div>
@@ -92,9 +92,7 @@
             </div>
         </section>
     </main>
-
     <footer>
-        <p>https://drive.google.com/file/d/1KOcyfoPncMwGRUvZbL4UiViZUz9d8QSm/view?usp=sharing link to wireframe</p>
         <p>&copy; 2024 White Water Rafting | Created by Benjamin Walveranta</p>
         <nav class="socials">
             <a href="https://twitter.com">

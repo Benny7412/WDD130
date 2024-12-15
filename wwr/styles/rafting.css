@@ -9,10 +9,13 @@ GLOBAL HTML
     --accent-color: #639CE1;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
+main h1, main h2, main h3, main h4, main h5, main h6 {
+    color: #defbf1;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -21,29 +24,21 @@ h1, h2, h3, h4, h5, h6 {
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
+
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     width: 100%;
-    margin: 0;
-    padding: 0;
     background-image: linear-gradient(45deg,#364e2f, #779f6b);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
-    color: #defbf1;
-}
-
 header {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 4fr 4fr;
     align-items: center;
     width: 100%;
     background-color: #333;
@@ -52,22 +47,18 @@ header {
 }
 
 header img {
-    width: 150px;
-    justify-self: start;
-}
-
-@media (max-width: 800px) {
-    img {
-        display:none
-    }
+    width: 100px;
+    justify-self: end;
+    border-radius: 50%;
 }
 
 nav {
     display: flex;
     text-align: right;
     width: 100%;
-    grid-column: 2/4;
+    grid-column: 3/4;
     justify-content: flex-end;
+    background-color: #333;
 }
 
 .navigation {
@@ -76,13 +67,13 @@ nav {
     justify-content: flex-end;
     align-self: flex-end;
     width: 100%;
+    padding: 0;
+    margin: 0px 0px 10px 0px;
 }
-
 
 .navigation li { 
     margin-left: 40px;
 }
-
 
 .last {
     margin-right: 70px;
@@ -95,38 +86,46 @@ nav {
     text-decoration: none;
 }
 
-@media (max-width: 800px) {
-    .last {
-        margin: 0;
-    }
-}
-@media (max-width: 800px) {
-    .navigation li {
-        margin-left: 10px;
-        
-    }
-}
 
 footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
     margin-top: auto;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 0px 0px 0px;
     text-align: center;
+    bottom: 0;
 }
 
 footer .socials {
-    background-color: #333;
-}
-
-footer .socials a {
-    margin: 0 10px;
-    background-color: #333;
+    grid-column: 3;
 }
 
 footer .socials img {
     width: 40px;
     height: 40px;
+    margin: 0 20px 20px 10px;
+}
+
+footer p {
+    width: fit-content;
+    grid-column: 2;
+    margin: 0;
+    justify-self: center;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    img {
+        display: none;
+    }
+    .last {
+        margin: 0;
+    }
+    .navigation li {
+        margin-left: 10px;
+    }
 }
 
 /*
@@ -161,7 +160,7 @@ ABOUT.HTML
     margin: 0;
     font-size: 70px;
     font-style: italic;
-    background: linear-gradient(45deg, #8af00a, #3e540b);
+    background: linear-gradient(45deg, #8af00a, #c7f361);
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-stroke: 1px #000;
@@ -213,7 +212,7 @@ ABOUT.HTML
 
 .historymain img {
     margin-bottom: 15px;
-    width: 300px;
+    width: 200px;
 }
 
 .historymain h2 {
@@ -222,7 +221,7 @@ ABOUT.HTML
 }
 
 .history p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 70px 35px 10px 35px;
     color: #ccdce2;
 }
@@ -233,26 +232,34 @@ ABOUT.HTML
     margin: 30px auto;
 }
 
-.adventures .images {
+#about-image-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: auto;
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
 }
 
-.adventures figure {
-    justify-content: space-between;
+#about-image-container > figure {
+    width: 200px;
+    overflow: hidden;
+    align-self: top;
 }
+
+
 
 
 .adventures h2 {
     text-align: center;
     font-size: 40px;
+    margin-top: 20px;
 }
 
 figcaption {
     font-size: 20px;
     color: #ccdce2;
+    
 }
 
 
@@ -285,8 +292,6 @@ form {
 form > * {
     flex-basis: 100%;
     margin: 0 10% 0 10%;
-    width: 0;
-    outline: 0;
 }
 
 form fieldset {
@@ -309,7 +314,7 @@ form fieldset {
     display: flex;
     flex-direction: column;
     height: auto;
-    margin: 0;
+    margin: 0; 
     color: rgb(241, 250, 199);
     font-size: 20px;
     margin-top: 30px;
@@ -324,25 +329,25 @@ form fieldset {
 
 /*Input styling*/
 
-.subform input[type="text"], textarea {
+.wwr-input-style {
     box-sizing: border-box;
     border: 1px gray;
     height: 30px;
     margin: 25px 20px 0px 20px;
     border-radius: 5px;
+    padding: 0 10px; 
 }
 
-.subform input[type="text"]:hover, textarea:hover {
-    border: solid gray 1px ;
+.wwr-input-style:hover {
+    border: 1px solid gray;
 }
 
 
-.subform input[type="text"]:focus, textarea:focus {
+.wwr-input-style:focus, textarea:focus {
     outline: 0;
     box-shadow:  0px 0px;
     border: solid 1px #40E0D0;
 }
-
 
 /*User info input class*/
 
@@ -390,7 +395,7 @@ form fieldset {
 }
 
 /*Submit button class*/
-.subelement {
+#subelement {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -399,7 +404,7 @@ form fieldset {
     align-self: start;
 }
 
-#submitbtn {
+.wwr-button-style {
     background-color: #a1b7c0;
     color: #0e2e3a;
     width: 200px;
@@ -412,11 +417,11 @@ form fieldset {
     font-style: italic;
 }
 
-#submitbtn:hover {
+.wwr-button-style:hover {
     border: solid 1px hsla(0, 0%, 0%, 0.249);
 }
 
-#submitbtn:focus {
+.wwr-button-style:focus {
     box-shadow: #819299 1px 1px;
 }
 
@@ -500,24 +505,281 @@ TEAM SECTION
     grid-row: 2;
     
 }
+
 /*
-.subelement > * {
-    border: solid 1px red;
-}
-
-
-.subform > * {
-    border: 1px solid yellow;
-}
-
- 
-form {
-    border: 1px solid red;
-}
-
-
-form fieldset {
-    border: solid 3px black;
-}
+/////////////////
+INDEX HTML///////
+/////////////////
 */
+
+
+
+#index-body {
+    
+    background-color: black;
+    background-image: none;
+}
+
+
+.background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/homeraftinghero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply the blur only to the background */
+    z-index: -1; /* Make sure the background div is behind the content */
+    mask-image: linear-gradient(to bottom, 
+    rgb(0, 0, 0) -10%,    /*1/4: Normal*/
+    rgba(0, 0, 0, 0.6) 10%,   /*2/4: Darkened */
+    rgba(0, 0, 0, 0.3) 40%,   /*3/4: Darker*/
+    rgba(0, 0, 0, 0) 100%,   /*4/4: Darkest */
+    transparent 100%);
+
+}
+
+#index-main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#call-to-action {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 10% 10% 20% 20%;
+    width: 100%;
+    height: 80vh;
+
+}
+
+#call-to-action h1 {
+    grid-column: 3;
+    align-content: center;
+    color: #f1f5f8;
+}
+
+#call-to-action h2 {
+    text-align: left; /* Better compatibility */
+    white-space: nowrap; /* Correct property */
+    color: #b0bec5;
+    width: fit-content;
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.index-button-style {
+    text-decoration: none;
+    background-color: #009688; 
+    color: #ffffff; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.index-button-style:hover {
+    background-color: #00796b;
+    border:#48f6e562 1px solid;
+}
+
+.index-button-style:focus {
+    border: 0;
+    background-color: #14c7b2;
+}
+
+/* whole bottom section */
+#form-and-offerings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-content: space-around;
+    column-gap: 5%;
+    margin-top: 7%;
+    padding-top: 1%;
+    color: white;
+}
+
+/* only subscribe container */
+#index-subscribe-form {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr 3fr 3fr 3fr 1fr; /* DELETE IT ALL*/
+    grid-column: 1;
+    margin: 0 0 0 20px;
+    padding: 20px 0px 20px 0px;
+    align-items: center;
+    height: 100%;
+}
+
+
+#index-subscribe-form h2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#index-subscribe-form-inputs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column: 2; 
+    grid-row: 2/4;
+    height: 100%;
+} 
+
+.index-subscribe-label {    
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.index-input-style {
+    grid-column: 2;
+}
+
+#index-subelement {
+    grid-column: 2;
+}
+
+/* Info containers */
+.info-container {
+    overflow: hidden;
+    height: 100%;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.info-container img {
+    overflow: hidden;
+    width: 70%;
+    border: #ffd9a7 2px solid;
+    outline: #b2a99d 1px solid;
+}
+
+#index-info-container {
+    grid-column: 2;
+
+}
+
+#index-info-container2 {
+    grid-column: 3;
+    margin-right: 20px;
+}
+
+#index-subelement {
+
+    width: 100%;
+    margin-top: 20px;
+    grid-row: 4;
+    align-self: start;
+}
+
+/*
+///////////////
+TRIPS.HTML/////
+///////////////
+*/
+
+
+#trips-main {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    row-gap: 30px;
+}
+
+#trips-main h1 {
+    grid-column: 3;
+    font-weight: 300;
+}
+
+#trips-contact-button {
+    background-color: #a1ed90; 
+    color: #000000; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 700;
+    grid-column: 3;
+    grid-row: 8;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+
+/* Table  */
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(153, 158, 159);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 700px;
+    grid-column: 3;
+    grid-row: 4;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(228 240 245);
+  }
+  
+  
+thead,tfoot {
+    background-color: rgb(167, 192, 203);
+  }
+  
+th, td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+  }
+  
+td:last-of-type {
+    text-align: center;
+  }
+  
+tbody > tr:nth-of-type(even) {
+    background-color: rgb(237 238 242);
+  }
+  
+
+#camp-table-header {
+    background-color: rgb(164, 227, 139);
+}
+
+#river-table-header {
+    background-color: #6edacf;
+}
+
+
+/* Trips info */
+#trips-info-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    grid-column: 1/6;
+    grid-row: 12;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+#trips-info-section img {
+    width: 400px;
+}
 
