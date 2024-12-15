@@ -160,11 +160,7 @@ ABOUT.HTML
     margin: 0;
     font-size: 70px;
     font-style: italic;
-    background: linear-gradient(45deg, #8af00a, #c7f361);
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1px #000;
-    -webkit-text-fill-color: transparent;
+
 }
 
 .customer {
@@ -244,7 +240,6 @@ ABOUT.HTML
 #about-image-container > figure {
     width: 200px;
     overflow: hidden;
-    align-self: top;
 }
 
 
