@@ -242,9 +242,6 @@ ABOUT.HTML
     overflow: hidden;
 }
 
-
-
-
 .adventures h2 {
     text-align: center;
     font-size: 40px;
@@ -525,8 +522,8 @@ INDEX HTML///////
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(8px); /* Apply the blur only to the background */
-    z-index: -1; /* Make sure the background div is behind the content */
+    filter: blur(8px);
+    z-index: -1;
     mask-image: linear-gradient(to bottom, 
     rgb(0, 0, 0) -10%,    /*1/4: Normal*/
     rgba(0, 0, 0, 0.6) 10%,   /*2/4: Darkened */
@@ -558,8 +555,8 @@ INDEX HTML///////
 }
 
 #call-to-action h2 {
-    text-align: left; /* Better compatibility */
-    white-space: nowrap; /* Correct property */
+    text-align: left;
+    white-space: nowrap;
     color: #b0bec5;
     width: fit-content;
     grid-column: 3;
